@@ -1,0 +1,1 @@
+# APPLETS_JAVA
