@@ -1,5 +1,5 @@
-package JButtonDemo;
 
+// Demonstrate an icon-based JButton. 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -8,7 +8,8 @@ import javax.swing.*;
 <applet code="JButtonDemo" width=250 height=450> 
 </applet> 
 */
-public class JButtonDemo extends JApplet implements ActionListener {
+public class JButtonDemo extends JApplet
+        implements ActionListener {
     JLabel jlab;
 
     public void init() {
@@ -27,32 +28,27 @@ public class JButtonDemo extends JApplet implements ActionListener {
     private void makeGUI() {
         // Change to flow layout.
         setLayout(new FlowLayout());
-
         // Add buttons to content pane.
         ImageIcon france = new ImageIcon("france.png");
         JButton jb = new JButton(france);
         jb.setActionCommand("France");
         jb.addActionListener(this);
         add(jb);
-
         ImageIcon germany = new ImageIcon("germany.png");
         jb = new JButton(germany);
         jb.setActionCommand("Germany");
         jb.addActionListener(this);
         add(jb);
-
         ImageIcon italy = new ImageIcon("italy.png");
         jb = new JButton(italy);
         jb.setActionCommand("Italy");
         jb.addActionListener(this);
         add(jb);
-
         ImageIcon japan = new ImageIcon("japan.png");
         jb = new JButton(japan);
         jb.setActionCommand("Japan");
         jb.addActionListener(this);
         add(jb);
-
         // Create and add the label to content pane.
         jlab = new JLabel("Choose a Flag");
         add(jlab);
